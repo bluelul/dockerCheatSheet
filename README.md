@@ -9,17 +9,16 @@
 - Read [Docker Homepage](https://docs.docker.com/engine/install/)
 
 ## Run Docker commands without sudo
+- Add the `docker` group if it doesn't already exist  
+Add the connected user `$USER` to the docker group  
+Restart the `docker` daemon  
 ```bash
 sudo groupadd docker
 sudo gpasswd -a $USER docker
 sudo service docker restart
-docker
 ```
-- Add the `docker` group if it doesn't already exist
-- Add the connected user `$USER` to the docker group
-- Restart the `docker` daemon
-- Check docker command without sudo
-- ***If fail, Log out and log back in*** so that your group membership is re-evaluated.
+- ***Log out and log back in*** so that your group membership is re-evaluated.
+- Check docker command without sudo: `docker ps -a`
 
 ## Build Hello World image
 Make a folder contain docker image
@@ -69,7 +68,7 @@ Run container with terminal shell, `shell_name` can be `bash`, `sh`, `zsh`,etc.
 ```bash
 docker run -it image_name shell_name
 ```
-Run container with mounted folder from host machine (first, cd to this folder)
+Run container with mounted folder from host machine (first, `cd` to this folder)
 ```bash
 docker run --mount src=$(pwd),target=/home,type=bind image_name
 ```
