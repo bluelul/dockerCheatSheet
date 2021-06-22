@@ -1,5 +1,5 @@
 # Docker Cheat Sheet
-### Author: `bluelul`
+### Author: `bluelul.com`
 
 ## Quick Concept
 - `Docker image` ~ `.gho (ghost) file` (can be OS image, pre-installed application, or both)
