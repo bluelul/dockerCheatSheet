@@ -120,3 +120,7 @@ Remove all containers
 ```bash
 docker rm $(docker ps -aq)
 ```
+### Commit container (backup/save/ghost container into an new image)
+```bash
+docker commit container_name image_name
+```
