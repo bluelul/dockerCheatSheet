@@ -98,7 +98,11 @@ docker restart container_name
 docker exec -it container_name shell_name
 ```
 `shell_name` can be `bash`, `sh`, `zsh`,etc.
-### Kill container (shutdown container, make it inactive)
+### Stop container (properly shutdown container, make it inactive)
+```bash
+docker stop container_name
+```
+### Kill container (force shutdown container, make it inactive)
 ```bash
 docker kill container_name
 ```
