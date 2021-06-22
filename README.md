@@ -81,6 +81,7 @@ Show active containers
 ```bash
 docker ps
 ```
+#### **Note:** container_id and container_name can be used to target a container in most Docker commands
 ### Stat containers (Docker top, monitor resource usage of containers)
 ```bash
 docker stat
