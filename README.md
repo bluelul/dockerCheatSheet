@@ -3,7 +3,7 @@
 
 ## Quick Concept
 - `Docker image` ~ `.gho (ghost) file` (can be OS image, pre-installed application, or both)
-- `Docker container` ~ `virtual machine` (machine installed Docker image, can be accessed via shell)
+- `Docker container` ~ `virtual machine` (machine which is installed a Docker image, can be accessed via shell)
 
 ## Install Docker
 - Read [Docker Homepage](https://docs.docker.com/engine/install/)
