@@ -84,10 +84,11 @@ docker run --mount src=$(pwd),target=/home,type=bind image_name
 ```
 - Run container with mounted usb devices
 ```bash
+docker run -d --privileged -v /dev/bus/usb:/dev/bus/usb container_name
+
+# install usbutils in container to use lsusb
 apt-get update
 apt-get install usbutils
-
-docker run -d --privileged -v /dev/bus/usb:/dev/bus/usb container_name
 ```
 ### List containers
 - Show all containers
