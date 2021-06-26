@@ -72,6 +72,13 @@ Run container with mounted folder from host machine (first, `cd` to this folder)
 ```bash
 docker run --mount src=$(pwd),target=/home,type=bind image_name
 ```
+Run container with mounted usb devices
+```bash
+apt-get update
+apt-get install usbutils
+
+docker run -d --privileged -v /dev/bus/usb:/dev/bus/usb container_name
+```
 ### List containers
 Show all containers
 ```bash
@@ -124,3 +131,4 @@ docker rm $(docker ps -aq)
 ```bash
 docker commit container_name image_name
 ```
+### Copy file 
