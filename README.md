@@ -1,12 +1,18 @@
 # Docker Cheat Sheet
 ### Author: `bluelul.com`
 
+<br/>  
+
 ## Quick Concept
 - `Docker image` ~ `.gho (ghost) file` (can be OS image, pre-installed application, or both)
 - `Docker container` ~ `virtual machine` (machine which is installed a Docker image, can be accessed via shell)
 
+<br/>  
+
 ## Install Docker
 - Read [Docker Homepage](https://docs.docker.com/engine/install/)
+
+<br/>  
 
 ## Run Docker commands without sudo
 - Add the `docker` group if it doesn't already exist  
@@ -19,6 +25,8 @@ sudo service docker restart
 ```
 - ***Log out and log back in*** so that your group membership is re-evaluated.
 - Check docker command without sudo: `docker ps -a`
+
+<br/>  
 
 ## Build Hello World image
 - Make a folder contain docker image
@@ -40,6 +48,8 @@ docker build -t docker_hello .
 ```bash
 docker images
 ```
+
+<br/>  
 
 ## Initiate and manage container
 ### Run container (create new container)
@@ -94,6 +104,8 @@ docker ps
 docker stat
 ``` 
 
+<br/>  
+
 ## Operate container
 ### Start container (start inactive container)
 ```bash
@@ -130,11 +142,15 @@ Remove all containers
 docker rm $(docker ps -aq)
 ```
 
+<br/>  
+
 ## Container and Image
 ### Commit container (backup/save/ghost container into an new image)
 ```bash
 docker commit container_name image_name
 ```
+
+<br/>  
 
 ## Container and Host machine
 ### Copy file / folder
