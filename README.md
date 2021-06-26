@@ -99,7 +99,7 @@ docker ps -a
 ```bash
 docker ps
 ```
-- **Note: Both `container_id` and `container_name` can be used to target a container in most Docker commands**
+- ***Note: Both `container_id` and `container_name` can be used to target a container in most Docker commands***
 ### Stat containers (Docker top, monitor resource usage of containers)
 ```bash
 docker stat
