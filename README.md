@@ -90,6 +90,12 @@ docker run -d --privileged -v /dev/bus/usb:/dev/bus/usb container_name
 apt-get update
 apt-get install usbutils
 ```
+
+- Run container with GUI app supported (X11)
+```bash
+docker run --env="DISPLAY" --volume="$HOME/.Xauthority:/home/.Xauthority:rw" container_name
+```
+
 ### List containers
 - Show all containers
 ```bash
