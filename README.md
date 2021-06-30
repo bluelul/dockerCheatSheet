@@ -93,7 +93,7 @@ apt-get install usbutils
 
 - Run container with GUI app supported (X11)
 ```bash
-docker run --env="DISPLAY" --volume="$HOME/.Xauthority:/home/.Xauthority:rw" container_name
+docker run --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/home/.Xauthority:rw" container_name
 ```
 
 ### List containers
