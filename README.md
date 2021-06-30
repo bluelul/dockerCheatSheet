@@ -96,6 +96,11 @@ apt-get install usbutils
 docker run --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/home/.Xauthority:rw" container_name
 ```
 
+- Run container only one time (auto removed after `exit`)
+```bash
+docker run --rm container_name
+```
+
 ### List containers
 - Show all containers
 ```bash
