@@ -51,9 +51,8 @@ docker images
 
 <br/>  
 
-## Initiate and manage container
-### Run container (create new container)
-#### Hello world example
+## Run container (create new container)
+### Hello world example
 - Default for hello_world example
 ```bash
 docker run --name hello_container -it docker_hello bash
@@ -67,7 +66,7 @@ echo hello_world > hello.txt
 
 docker run --name hello_container --mount src=$(pwd),target=/home,type=bind -it docker_hello bash
 ```
-#### Basic
+### Basic
 - Run container standalone (random name)
 ```bash
 docker run image_name
@@ -76,7 +75,7 @@ docker run image_name
 ```bash
 docker run -it image_name shell_name
 ```
-#### Option add to `Basic`
+### Option add to `Basic`
 - Run container with specific name 
 ```bash
 --name container_name
@@ -102,7 +101,7 @@ apt-get install usbutils
 ```bash
 --rm 
 ```
-
+## Manage container
 ### List containers
 - Show all containers
 ```bash
