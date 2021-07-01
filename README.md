@@ -53,6 +53,7 @@ docker images
 
 ## Initiate and manage container
 ### Run container (create new container)
+#### Hello world example
 - Default for hello_world example
 ```bash
 docker run --name hello_container -it docker_hello bash
@@ -66,39 +67,40 @@ echo hello_world > hello.txt
 
 docker run --name hello_container --mount src=$(pwd),target=/home,type=bind -it docker_hello bash
 ```
+#### Basic
 - Run container standalone (random name)
 ```bash
 docker run image_name
-```
-- Run container with specific name 
-```bash
-docker run --name container_name image_name
 ```
 - Run container with terminal shell, `shell_name` can be `bash`, `sh`, `zsh`,etc.
 ```bash
 docker run -it image_name shell_name
 ```
+#### Option add to `Basic`
+- Run container with specific name 
+```bash
+--name container_name
+```
 - Run container with mounted folder from host machine (first, `cd` to this folder)
 ```bash
-docker run --mount src=$(pwd),target=/home,type=bind image_name
+--mount src=$(pwd),target=/home,type=bind
 ```
 - Run container with mounted usb devices
 ```bash
-docker run -d --privileged -v /dev/bus/usb:/dev/bus/usb container_name
-
+-d --privileged -v /dev/bus/usb:/dev/bus/usb
+```
+```bash
 # install usbutils in container to use lsusb
 apt-get update
 apt-get install usbutils
 ```
-
 - Run container with GUI app supported (X11)
 ```bash
-docker run --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/home/.Xauthority:rw" container_name
+--net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/home/.Xauthority:rw"
 ```
-
 - Run container only one time (auto removed after `exit`)
 ```bash
-docker run --rm container_name
+--rm 
 ```
 
 ### List containers
