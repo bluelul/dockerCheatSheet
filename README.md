@@ -4,7 +4,7 @@
 <br/>  
 
 ## Quick Concept
-- `Docker image` ~ `.gho (ghost) file` (can be OS image, pre-installed application, or both)
+- `Docker image` ~ `.gho (ghost) file` (can be OS image {actually, only contains minimal OS dependencies/softwares, not included Linux kernel}, pre-installed application, or both)
 - `Docker container` ~ `virtual machine` (machine which is installed a Docker image, can be accessed via shell)
 
 <br/>  
