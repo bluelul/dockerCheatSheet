@@ -97,6 +97,11 @@ apt-get install usbutils
 ```bash
 --net=host --env="DISPLAY" --volume="$HOME/.Xauthority:/home/.Xauthority:rw"
 ```
+```bash
+# disable access control of X11 on host machine to allow any client to access host machine
+# this command is unsafe, just for testing, google xhost for more strictly command
+xhost +
+```
 - Run container only one time (auto removed after `exit`)
 ```bash
 --rm 
