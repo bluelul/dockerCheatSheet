@@ -86,7 +86,7 @@ docker run -it image_name shell_name
 ```
 - Run container with mounted usb devices
 ```bash
--d --privileged -v /dev/bus/usb:/dev/bus/usb
+--privileged -v /dev/bus/usb:/dev/bus/usb
 ```
 ```bash
 # install usbutils in container to use lsusb
