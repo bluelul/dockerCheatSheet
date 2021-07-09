@@ -111,13 +111,17 @@ xhost +
 
 ## Manage container
 ### List containers
+- Show active containers
+```bash
+docker ps
+```
 - Show all containers
 ```bash
 docker ps -a
 ```
-- Show active containers
+- Show all containers with size usage
 ```bash
-docker ps
+docker ps -as
 ```
 - ***Note: Both `container_id` and `container_name` can be used to target a container in most Docker commands***
 ### Stat containers (Docker top, monitor resource usage of containers)
