@@ -136,6 +136,7 @@ docker stat
 docker inspect container_name
 ```
 ### Log container (show all log, stdin, stdout history of a container)
+This feature is not stable, may miss some logs
 ```bash
 docker logs container_name
 ```
