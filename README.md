@@ -105,6 +105,10 @@ apt-get install usbutils
 # this command is unsafe, just for testing, google xhost for more strictly command
 xhost +
 ```
+- Add environment variable to container when startup
+```bash
+-e ENV_NAME=env_value
+```
 - Run container only one time (auto removed after `exit`)
 ```bash
 --rm 
