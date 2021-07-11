@@ -130,7 +130,15 @@ docker ps -as
 ### Stat containers (Docker top, monitor resource usage of containers)
 ```bash
 docker stat
-``` 
+```
+### Inspect container (show all information of a container)
+```bash
+docker inspect container_name
+```
+### Log container (show all log, stdin, stdout history of a container)
+```bash
+docker logs container_name
+```
 
 <br/>  
 
