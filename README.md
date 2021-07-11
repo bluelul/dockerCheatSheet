@@ -71,7 +71,9 @@ docker run --name hello_container --mount src=$(pwd),target=/home,type=bind -it 
 ```bash
 docker run image_name
 ```
-- Run container with terminal shell, `shell_name` can be `bash`, `sh`, `zsh`,etc.
+- Run container with terminal shell, `shell_name` can be `bash`, `sh`, `zsh`,etc.  
+  -i : interact (stdin) with container's executed command (e.g. terminal shell)  
+  -t : create a pseudo [tty](https://en.wikipedia.org/wiki/Tty_(unix))
 ```bash
 docker run -it image_name shell_name
 ```
