@@ -82,7 +82,8 @@ docker run -it image_name shell_name
 ```bash
 --name container_name
 ```
-- Run container with mounted folder from host machine (first, `cd` to this folder)
+- Run container with mounted folder from host machine (first, `cd` to this folder)  
+  The `target` argument can be any destination folder, it will be automatically created if not exist in `image_name` yet
 ```bash
 --mount src=$(pwd),target=/home,type=bind
 ```
