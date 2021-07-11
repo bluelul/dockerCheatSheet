@@ -203,3 +203,35 @@ docker cp container_name:path_to_source_file_or_folder host_path_to_dest_folder
 ```bash
 docker cp host_path_to_source_file_or_folder container_name:path_to_dest_folder 
 ```
+
+<br/>  
+
+## Image management
+### Show all images
+```bash
+docker images
+```
+### Remove image
+```bash
+docker rmi image_name
+```
+### Show image building history (with storage allocate of each step)
+```bash
+docker history image_name
+```
+### Save image to .tar file
+```bash
+docker export image_name -o file_name.tar
+```
+### Create image from .tar file
+```bash
+docker import file_name.tar image_name
+```
+### Download image from Docker Hub
+```bash
+docker pull image_name
+```
+### Upload image to Docker Hub
+```bash
+docker push image_name
+```
