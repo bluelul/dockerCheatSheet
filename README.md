@@ -237,3 +237,35 @@ docker pull image_name
 ```bash
 docker push image_name
 ```
+
+<br/>  
+
+## Build Dockerfile
+### ENTRYPOINT and CMD (autorun command when container startup)
+Using
+```dockerfile
+ENTRYPOINT exec arg
+ENTRYPOINT ["exec", "arg"]
+CMD exec arg
+CMD ["exec", "arg"]
+```
+Running
+```bash
+docker run container_name
+docker run container_name new_cmd
+docker run --entrypoint new_entry_point container_name new_cmd
+```
+Working with pseudo code
+```python
+if exist(--entrypoint):
+  entrypoint = new_entry_point
+else:
+  entrypoint = ENTRYPOINT
+
+if exist(new_cmd):
+  cmd = new_cmd
+else:
+  cmd = CMD
+  
+the_final_autorun_startup_command = entrypoint + " " + cmd
+```
