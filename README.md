@@ -17,15 +17,25 @@
 <br/>  
 
 ## Run Docker commands without sudo
-- Add the `docker` group if it doesn't already exist  
-Add the connected user `$USER` to the docker group  
-Restart the `docker` daemon  
+### Config system
+Add the `docker` group if it doesn't already exist  
 ```bash
 sudo groupadd docker
-sudo gpasswd -a $USER docker
-sudo service docker restart
 ```
-- ***Log out and log back in*** so that your group membership is re-evaluated.
+Add the connected user `$USER` to the docker group    
+```bash
+sudo gpasswd -a $USER docker
+```
+### Reload system
+- Option 1: restart your computer
+- Option 2:
+  - Restart the `docker` daemon
+  ```bash
+  sudo service docker restart
+  ```
+  - ***Log out and log back in*** so that your group membership is re-evaluated.
+
+### Verify
 - Check docker command without sudo: `docker ps -a`
 
 <br/>  
