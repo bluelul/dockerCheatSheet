@@ -151,24 +151,37 @@ docker stat
 ```bash
 docker inspect container_name
 ```
-### Log container (show all log, stdin, stdout history of a container)
-This feature is not stable, may miss some logs
+### Log container (show all log, stdin, stdout history of the `initial terminal shell` of container)
+Show log
 ```bash
 docker logs container_name
+```
+Show log with timestamp of each command
+```bash
+docker logs -t container_name
+```
+Show log continuously
+```bash
+docker logs -f container_name
 ```
 
 <br/>  
 
 ## Operate container
 ### Start container (start inactive container)
+Start an inactive container (created by run command) in detach mode
 ```bash
 docker start container_name
+```
+Start and jump into the initial terminal shell of an inactive container (created by run command with `-it image_name shell_name` option)
+```bash
+docker start -i container_name
 ```
 ### Restart container (stop then start an active container or start an inactive container)
 ```bash
 docker restart container_name
 ```
-### Open terminal shell in active container
+### Open new terminal shell in active container
 ```bash
 docker exec -it container_name shell_name
 ```
