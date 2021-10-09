@@ -12,37 +12,25 @@
 <br/>  
 
 ## Install Docker
--  Fastest way
+The fastest way
 ```
 sudo apt install curl
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 ```
-- For more methods, read [Docker Homepage](https://docs.docker.com/engine/install/)
+For more methods, read [Docker Homepage](https://docs.docker.com/engine/install/)
 
 <br/>  
 
 ## Run Docker commands without sudo
-### Config system
-Add the `docker` group if it doesn't already exist  
+Run these command:
 ```bash
 sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
 ```
-Add the connected user `$USER` to the docker group    
-```bash
-sudo gpasswd -a $USER docker
-```
-### Reload system
-- Option 1: restart your computer
-- Option 2:
-  - Restart the `docker` daemon
-  ```bash
-  sudo service docker restart
-  ```
-  - ***Log out and log back in*** so that your group membership is re-evaluated.
-
-### Verify
-- Check docker command without sudo: `docker ps -a`
+Check docker command without sudo: `docker ps -a`  
+If not work, restart your Linux OS
 
 <br/>  
 
