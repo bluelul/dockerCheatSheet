@@ -12,7 +12,13 @@
 <br/>  
 
 ## Install Docker
-- Read [Docker Homepage](https://docs.docker.com/engine/install/)
+-  Fastest way
+```
+sudo apt install curl
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+```
+- For more methods, read [Docker Homepage](https://docs.docker.com/engine/install/)
 
 <br/>  
 
