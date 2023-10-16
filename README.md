@@ -61,7 +61,7 @@ docker images
 ### Hello world example
 - Default for hello_world example
 ```bash
-docker run --name hello_container -it docker_hello bash
+docker run --name hello_container -h hello_container -it docker_hello bash
 ```
 - Default for hello_world example with host machine's share-folder mounted
 ```bash
@@ -87,6 +87,13 @@ docker run -it image_name shell_name
 - Run container with specific name 
 ```bash
 --name container_name
+```
+- Run container with specific hostname (instead of container's ID codename)
+```bash
+--hostname container_name
+```
+```bash
+-h container_name
 ```
 - Run container with mounted folder from host machine (first, `cd` to this folder)  
   The `target` argument can be any destination folder, it will be automatically created if not exist in `image_name` yet
