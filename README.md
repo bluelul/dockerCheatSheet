@@ -255,7 +255,14 @@ docker pull image_name
 docker push image_name
 ```
 
-<br/>  
+<br/> 
+
+## Docker in Docker
+```bash
+docker run --privileged --name dind -d docker:dind
+```
+
+<br/> 
 
 ## Build Dockerfile
 ### ENTRYPOINT and CMD (autorun command when container startup)
